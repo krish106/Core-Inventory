@@ -138,18 +138,6 @@ This generates **2 years of realistic inventory data** including 50 products, 4 
 
 ---
 
-## 📸 Screenshots
-
-### Dashboard
-The landing page shows a comprehensive snapshot of inventory operations with interactive charts and dynamic filters.
-
-### Products
-Full product management with search, categories, and detailed product views.
-
-### AI Assistant
-Chat with the AI to check stock, get summaries, find low-stock items, and create operations using natural language.
-
----
 
 ## 🔌 API Endpoints
 

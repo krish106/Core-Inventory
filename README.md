@@ -169,6 +169,9 @@ Chat with the AI to check stock, get summaries, find low-stock items, and create
 ## 👥 Team
 
 - **Krish** — Full Stack Developer
+- **Shrey Rabadiya** — Full Stack Developer
+- **Shruti Babariya** — Full Stack Developer
+- **Makati Vruti** — Full Stack Developer
 
 ---
 

@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== GLOBAL DARK MODE OVERRIDES ===== */
+/* This applies dark mode to ALL pages without editing individual files */
+
+html.dark body { background-color: #030712; color: #e2e8f0; }
+
+/* Cards, tables, modals — any bg-white element */
+html.dark .bg-white { background-color: #111827 !important; }
+html.dark .bg-gray-50, html.dark .bg-gray-50\/50 { background-color: #1f2937 !important; }
+html.dark .bg-gray-100 { background-color: #1f2937 !important; }
+html.dark .bg-gray-200 { background-color: #374151 !important; }
+
+/* Text colors */
+html.dark .text-gray-900 { color: #f1f5f9 !important; }
+html.dark .text-gray-800 { color: #e2e8f0 !important; }
+html.dark .text-gray-700 { color: #d1d5db !important; }
+html.dark .text-gray-600 { color: #9ca3af !important; }
+html.dark .text-gray-500 { color: #9ca3af !important; }
+html.dark .text-gray-400 { color: #6b7280 !important; }
+
+/* Borders */
+html.dark .border-gray-100 { border-color: #1f2937 !important; }
+html.dark .border-gray-200 { border-color: #374151 !important; }
+html.dark .border-gray-300 { border-color: #4b5563 !important; }
+html.dark .divide-gray-50 > :not([hidden]) ~ :not([hidden]) { border-color: #1f2937 !important; }
+html.dark .divide-gray-100 > :not([hidden]) ~ :not([hidden]) { border-color: #1f2937 !important; }
+
+/* Hover states */
+html.dark .hover\:bg-gray-50:hover { background-color: #1f2937 !important; }
+html.dark .hover\:bg-blue-50\/50:hover { background-color: rgba(59, 130, 246, 0.1) !important; }
+html.dark .hover\:bg-gray-50\/50:hover { background-color: #1f2937 !important; }
+
+/* Inputs, selects, textareas */
+html.dark input, html.dark select, html.dark textarea {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #e2e8f0 !important;
+}
+html.dark input::placeholder, html.dark textarea::placeholder {
+  color: #6b7280 !important;
+}
+html.dark option {
+  background-color: #1f2937 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Modals */
+html.dark .bg-white.rounded-2xl { background-color: #1f2937 !important; }
+
+/* Skeleton loading */
+html.dark .animate-pulse { opacity: 0.3 !important; }
+
+/* Scrollbar */
+html.dark ::-webkit-scrollbar-thumb { background: #475569; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* Status badges keep their colors in dark mode (slightly adjusted) */
+html.dark .bg-red-50 { background-color: rgba(239, 68, 68, 0.15) !important; }
+html.dark .bg-amber-50, html.dark .bg-orange-50 { background-color: rgba(245, 158, 11, 0.15) !important; }
+html.dark .bg-emerald-50, html.dark .bg-green-50 { background-color: rgba(16, 185, 129, 0.15) !important; }
+html.dark .bg-blue-50 { background-color: rgba(59, 130, 246, 0.15) !important; }
+html.dark .bg-purple-50 { background-color: rgba(139, 92, 246, 0.15) !important; }
+html.dark .bg-indigo-50 { background-color: rgba(99, 102, 241, 0.15) !important; }
+
+/* ===== SMOOTH TRANSITION ===== */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.animate-fadeIn { animation: fadeIn 0.3s ease-out; }
+.animate-slideIn { animation: slideIn 0.3s ease-out; }
+
+/* Toast animations */
+@keyframes toast-in { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes toast-out { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
+.toast-enter { animation: toast-in 0.3s ease-out; }
+.toast-exit { animation: toast-out 0.3s ease-in; }
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Status colors */
+.status-draft { @apply bg-gray-100 text-gray-700; }
+.status-waiting { @apply bg-blue-100 text-blue-700; }
+.status-ready { @apply bg-amber-100 text-amber-700; }
+.status-done { @apply bg-emerald-100 text-emerald-700; }
+.status-cancelled { @apply bg-red-100 text-red-700; }
+.status-in_stock { @apply bg-emerald-100 text-emerald-700; }
+.status-low_stock { @apply bg-amber-100 text-amber-700; }
+.status-out_of_stock { @apply bg-red-100 text-red-700; }

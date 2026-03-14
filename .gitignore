@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+frontend/dist/
+backend/dist/
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test / temp files
+test_*.png
+test_*.pdf
+pdf_content.txt
+
+# Agent configs (AI tools)
+.agents/
+.gemini/
+
+# PDFs (problem statements / docs not part of source)
+*.pdf

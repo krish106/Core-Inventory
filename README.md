@@ -158,8 +158,6 @@ This generates **2 years of realistic inventory data** including 50 products, 4 
 
 - **Krish** — Full Stack Developer
 - **Shrey Rabadiya** — Full Stack Developer
-- **Shruti Babariya** — Full Stack Developer
-- **Makati Vruti** — Full Stack Developer
 
 ---
 
